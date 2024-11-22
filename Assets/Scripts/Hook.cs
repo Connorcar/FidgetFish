@@ -6,6 +6,7 @@ public class Hook : MonoBehaviour
 {
     public GameManager gm;          // Reference to the GameManager for tracking fish count
     private List<GameObject> caughtFish = new List<GameObject>(); // List to track caught fish
+    public bool isFishing = false;  // Flag to check if the hook is fishing
 
     void Update()
     {
