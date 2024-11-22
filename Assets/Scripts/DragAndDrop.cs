@@ -7,6 +7,11 @@ public class DragAndDrop : MonoBehaviour
 {
     [SerializeField] private Canvas canvas;
 
+    private void Start()
+    {
+        canvas = GetComponentInParent<Canvas>();
+    }
+
     public void DragHandler(BaseEventData data)
     {
         PointerEventData pointerData = (PointerEventData)data;
