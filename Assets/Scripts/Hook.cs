@@ -8,6 +8,11 @@ public class Hook : MonoBehaviour
     private List<GameObject> caughtFish = new List<GameObject>(); // List to track caught fish
     public bool isFishing = false;  // Flag to check if the hook is fishing
 
+    void Start()
+    {
+        isFishing = true;
+    }
+
     void Update()
     {
         // Make the caught fish follow the hook's position
@@ -24,9 +29,11 @@ public class Hook : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Collision detected!");
+        //print(other.tag + isFishing + gm.fishCaught + gm.maxFish);
+        
 
         // Check if the collided object has the tag "Fish"
-        if (other.CompareTag("Fish"))
+        if (other.CompareTag("Fish") && isFishing == true && gm.fishCaught < gm.maxFish)
         {
             // Rotate the fish 90 degrees depending on its current facing direction
             Transform fishTransform = other.transform;
@@ -41,8 +48,30 @@ public class Hook : MonoBehaviour
 
             // Decrement the fish count in the GameManager
             gm.fishCount--;
+            
 
             Debug.Log("Fish caught!");
+
+            isFishing = false;
+        }
+        if (other.CompareTag("Boat") && isFishing == false)
+        {
+            gm.fishCaught++;
+            
+            // Destroy all caught fish
+            foreach (GameObject fish in caughtFish)
+            {
+                Destroy(fish);
+            }
+
+            // Clear the list of caught fish
+            caughtFish.Clear();
+
+            // Set the fishing flag to false
+            isFishing = true;
+
+            Debug.Log("Fish released!");
+            
         }
     }
 }
