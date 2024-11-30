@@ -11,7 +11,7 @@ public class MergeFish : MonoBehaviour
 
     private void Start()
     {
-        transform.localScale = new Vector3(-1f, 1f, 1f);
+        // transform.localScale = new Vector3(-1f, 1f, 1f);
 
         dragAndDrop = GetComponent<DragAndDrop>();
     }
