@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 
 public class DragAndDrop : MonoBehaviour
 {
-    [SerializeField] private Canvas canvas;
+    private Canvas canvas;
+    [SerializeField] private bool isDragging = false;
 
     private void Start()
     {
@@ -14,6 +15,8 @@ public class DragAndDrop : MonoBehaviour
 
     public void DragHandler(BaseEventData data)
     {
+        isDragging = true;
+
         PointerEventData pointerData = (PointerEventData)data;
 
         Vector2 position;
@@ -24,5 +27,20 @@ public class DragAndDrop : MonoBehaviour
             out position);
 
         transform.position = canvas.transform.TransformPoint(position);
+    }
+
+    public void OnPointerDown(BaseEventData eventData)
+    {
+        isDragging = true;
+    }
+
+    public void OnPointerUp(BaseEventData eventData)
+    {
+        isDragging = false;
+    }
+
+    public bool IsDragging()
+    {
+        return isDragging;
     }
 }
