@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DragAndDrop : MonoBehaviour
 {
@@ -11,22 +12,26 @@ public class DragAndDrop : MonoBehaviour
     private void Start()
     {
         canvas = GetComponentInParent<Canvas>();
+        Debug.Log(SceneManager.GetActiveScene().name);
     }
 
     public void DragHandler(BaseEventData data)
     {
-        isDragging = true;
+        if (FindObjectOfType<GameManager>().activeScene == 2)
+        {
+            isDragging = true;
 
-        PointerEventData pointerData = (PointerEventData)data;
+            PointerEventData pointerData = (PointerEventData)data;
 
-        Vector2 position;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            (RectTransform)canvas.transform,
-            pointerData.position,
-            canvas.worldCamera,
-            out position);
+            Vector2 position;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                (RectTransform)canvas.transform,
+                pointerData.position,
+                canvas.worldCamera,
+                out position);
 
-        transform.position = canvas.transform.TransformPoint(position);
+            transform.position = canvas.transform.TransformPoint(position);
+        }
     }
 
     public void OnPointerDown(BaseEventData eventData)
