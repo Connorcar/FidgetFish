@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (fishCount == 0)
+        if ((activeScene == 1) && (fishCount == 0))
         {
             spawnFish.SpawnObjects();
         }
