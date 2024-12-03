@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         {
             spawnFish.SpawnObjects();
         }
-        fishCaughtText.text = "Fish Caught: " + fishCaught;
+        fishCaughtText.text = "Fish Caught: " + fishCaught + "/" + maxFish;
     }
 
     public void SwitchToAquarium()
