@@ -2317,10 +2317,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish_Tier 9
       objectReference: {fileID: 0}
-    - target: {fileID: 2903564940276871648, guid: d62e40dc9f3563449a2e4ce1fc4bb983, type: 3}
-      propertyPath: fish_tier
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 9012887463689777860, guid: d62e40dc9f3563449a2e4ce1fc4bb983, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2524,10 +2520,6 @@ PrefabInstance:
     - target: {fileID: 1266275654545789623, guid: 3149c3226068eef4aa5873738d64d0d8, type: 3}
       propertyPath: m_Name
       value: Fish_Tier 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903564940276871648, guid: 3149c3226068eef4aa5873738d64d0d8, type: 3}
-      propertyPath: fish_tier
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9012887463689777860, guid: 3149c3226068eef4aa5873738d64d0d8, type: 3}
       propertyPath: m_Pivot.x
@@ -2866,10 +2858,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish_Tier 6
       objectReference: {fileID: 0}
-    - target: {fileID: 2903564940276871648, guid: 096b0a38014c08145b81551711a7b6cf, type: 3}
-      propertyPath: fish_tier
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 9012887463689777860, guid: 096b0a38014c08145b81551711a7b6cf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3073,10 +3061,6 @@ PrefabInstance:
     - target: {fileID: 1266275654545789623, guid: c0e4008acfbf8bb4fb66912638811d84, type: 3}
       propertyPath: m_Name
       value: Fish_Tier 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903564940276871648, guid: c0e4008acfbf8bb4fb66912638811d84, type: 3}
-      propertyPath: fish_tier
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9012887463689777860, guid: c0e4008acfbf8bb4fb66912638811d84, type: 3}
       propertyPath: m_Pivot.x
@@ -3388,10 +3372,6 @@ PrefabInstance:
     - target: {fileID: 1266275654545789623, guid: 4f9f73f9718f37643a7a7b82ae14d1ac, type: 3}
       propertyPath: m_Name
       value: Fish_Tier 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903564940276871648, guid: 4f9f73f9718f37643a7a7b82ae14d1ac, type: 3}
-      propertyPath: fish_tier
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9012887463689777860, guid: 4f9f73f9718f37643a7a7b82ae14d1ac, type: 3}
       propertyPath: m_Pivot.x
@@ -3832,10 +3812,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish_Tier 2
       objectReference: {fileID: 0}
-    - target: {fileID: 2903564940276871648, guid: 8384ea6a4ac6a334897c667917af5b56, type: 3}
-      propertyPath: fish_tier
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 9012887463689777860, guid: 8384ea6a4ac6a334897c667917af5b56, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4206,10 +4182,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish_Tier 5
       objectReference: {fileID: 0}
-    - target: {fileID: 2903564940276871648, guid: 6786b51441a57a9479a57efb8756850d, type: 3}
-      propertyPath: fish_tier
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 9012887463689777860, guid: 6786b51441a57a9479a57efb8756850d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4311,10 +4283,6 @@ PrefabInstance:
     - target: {fileID: 1266275654545789623, guid: 42fab105f65bb9848af86aaafc4ec0d3, type: 3}
       propertyPath: m_Name
       value: Fish_Tier 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903564940276871648, guid: 42fab105f65bb9848af86aaafc4ec0d3, type: 3}
-      propertyPath: fish_tier
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9012887463689777860, guid: 42fab105f65bb9848af86aaafc4ec0d3, type: 3}
       propertyPath: m_Pivot.x
@@ -4550,10 +4518,6 @@ PrefabInstance:
     - target: {fileID: 1266275654545789623, guid: 97bfa62ec8e866642ab060c9efb5c774, type: 3}
       propertyPath: m_Name
       value: Fish_Tier 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903564940276871648, guid: 97bfa62ec8e866642ab060c9efb5c774, type: 3}
-      propertyPath: fish_tier
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9012887463689777860, guid: 97bfa62ec8e866642ab060c9efb5c774, type: 3}
       propertyPath: m_Pivot.x
