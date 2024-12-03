@@ -1898,7 +1898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishPrefabs:
-  - {fileID: 6466890216387819570, guid: 16d265da79f1d944eadfa549a4dbd687, type: 3}
+  - {fileID: 1266275654545789623, guid: 24875bd8d8849c84f8c7031b07d75ba4, type: 3}
   fishDepths: c800000016030000
   fishSpeeds: 7d000000
   minX: 100
@@ -3564,6 +3564,7 @@ GameObject:
   - component: {fileID: 1504236562}
   - component: {fileID: 1504236561}
   - component: {fileID: 1504236560}
+  - component: {fileID: 1504236563}
   m_Layer: 5
   m_Name: Button-AddFish
   m_TagString: Untagged
@@ -3635,9 +3636,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SwitchToFishing
+      - m_Target: {fileID: 1504236563}
+        m_TargetAssemblyTypeName: Aquarium, Assembly-CSharp
+        m_MethodName: onAddFishClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3685,6 +3686,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504236558}
   m_CullTransparentMesh: 1
+--- !u!114 &1504236563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504236558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26159107a0bd5554dab15ef23f89a875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishPrefabs:
+  - {fileID: 1266275654545789623, guid: 24875bd8d8849c84f8c7031b07d75ba4, type: 3}
+  gm: {fileID: 1834708402}
+  minX: 100
+  maxX: 1820
+  minY: 200
+  maxY: 790
+  fishParent: {fileID: 192416567}
 --- !u!1 &1594341395
 GameObject:
   m_ObjectHideFlags: 0
@@ -3873,6 +3894,7 @@ MonoBehaviour:
   fishCount: 0
   spawnFish: {fileID: 692289116}
   fishCaught: 0
+  caughtFishTiers: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxFish: 10
   fishCaughtText: {fileID: 1422651704}
   activeScene: 1

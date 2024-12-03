@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int fishCount = 0;
     public SpawnFish spawnFish;
     public int fishCaught = 0;
+    public int[] caughtFishTiers;
     public int maxFish = 10;
     public TextMeshProUGUI fishCaughtText;
 
