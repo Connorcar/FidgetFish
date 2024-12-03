@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hook : MonoBehaviour
 {
     public GameManager gm;          // Reference to the GameManager for tracking fish count
-    private List<GameObject> caughtFish = new List<GameObject>(); // List to track caught fish
+    private GameObject currFish;    // Reference to the current fish caught by the hook
     public bool isFishing = false;  // Flag to check if the hook is fishing
 
     void Start()
@@ -16,13 +16,9 @@ public class Hook : MonoBehaviour
     void Update()
     {
         // Make the caught fish follow the hook's position
-        foreach (GameObject fish in caughtFish)
-        {
-            if (fish != null)
-            {
-                Vector3 hookPosition = transform.position;
-                fish.transform.position = new Vector3(hookPosition.x, hookPosition.y, fish.transform.position.z);
-            }
+        if (currFish != null){
+            Vector3 hookPosition = transform.position;
+            currFish.transform.position = new Vector3(hookPosition.x, hookPosition.y, currFish.transform.position.z);
         }
     }
 
@@ -41,10 +37,10 @@ public class Hook : MonoBehaviour
             fishTransform.eulerAngles = newRotation;
 
             // Add the fish to the list of caught fish
-            caughtFish.Add(other.gameObject);
+            currFish = other.gameObject;
 
             // Disable the fish's collider to prevent multiple collisions
-            other.GetComponent<Collider2D>().enabled = false;
+            currFish.GetComponent<Collider2D>().enabled = false;
 
             // Decrement the fish count in the GameManager
             gm.fishCount--;
@@ -56,16 +52,9 @@ public class Hook : MonoBehaviour
         }
         if (other.CompareTag("Boat") && isFishing == false)
         {
-            gm.fishCaught++;
-            
-            // Destroy all caught fish
-            foreach (GameObject fish in caughtFish)
-            {
-                Destroy(fish);
-            }
-
-            // Clear the list of caught fish
-            caughtFish.Clear();
+            gm.fishCaught++;            
+            gm.caughtFishTiers[gm.fishCaught - 1] = currFish.GetComponent<MergeFish>().GetFishTier();
+            Destroy(currFish);
 
             // Set the fishing flag to false
             isFishing = true;

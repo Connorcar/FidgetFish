@@ -18,22 +18,30 @@ public class MergeFish : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        MergeFish collisionFish = collision.gameObject.GetComponent<MergeFish>();
-        if (fish_tier == collisionFish.fish_tier)
+        if(collision.gameObject.tag == "Fish")
         {
-            if (dragAndDrop.IsDragging() || collisionFish.dragAndDrop.IsDragging()) 
+            MergeFish collisionFish = collision.gameObject.GetComponent<MergeFish>();
+            if (fish_tier == collisionFish.fish_tier)
             {
-                if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
+                if (dragAndDrop.IsDragging() || collisionFish.dragAndDrop.IsDragging()) 
                 {
-                    Destroy(collision.gameObject);
-                    gameObject.transform.localScale = gameObject.transform.localScale * size_multiplier;
-                    fish_tier += 1;
-                }
-                else
-                {
-                    Destroy(gameObject);
+                    if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
+                    {
+                        Destroy(collision.gameObject);
+                        gameObject.transform.localScale = gameObject.transform.localScale * size_multiplier;
+                        fish_tier += 1;
+                    }
+                    else
+                    {
+                        Destroy(gameObject);
+                    }
                 }
             }
         }
+    }
+
+    public int GetFishTier()
+    {
+        return fish_tier;
     }
 }
