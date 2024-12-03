@@ -1584,7 +1584,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0140993556b0b2143b06aca76f22a010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishPrefab: {fileID: 6466890216387819570, guid: 16d265da79f1d944eadfa549a4dbd687, type: 3}
+  fishPrefabs:
+  - {fileID: 6466890216387819570, guid: 16d265da79f1d944eadfa549a4dbd687, type: 3}
+  fishDepths: c800000016030000
+  fishSpeeds: 7d000000
   minX: 100
   maxX: 1820
   minY: 200

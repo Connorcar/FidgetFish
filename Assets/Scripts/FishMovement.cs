@@ -40,4 +40,9 @@ public class FishMovement : MonoBehaviour
         localScale.x *= -1; // Invert the X-scale
         transform.localScale = localScale;
     }
+
+    public void setSpeed(int newSpeed)
+    {
+        speed = newSpeed;
+    }
 }

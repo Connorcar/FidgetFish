@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SpawnFish : MonoBehaviour
 {
-    public GameObject fishPrefab; // The prefab to spawn
+    public GameObject[] fishPrefabs; // List of fish prefabs to spawn
+    public int[] fishDepths; // List of fish depths
+    public int[] fishSpeeds;
     public float minX;       // Minimum X-axis range
     public float maxX;        // Maximum X-axis range        
     public float minY;       // Minimum X-axis range
@@ -31,7 +33,8 @@ public class SpawnFish : MonoBehaviour
             spawnPosition = new Vector3(randomX, randomY, 0f);
 
             // Instantiate the objectPrefab at the spawn position
-            Instantiate(fishPrefab, spawnPosition, Quaternion.identity, fishParent);
+            GameObject newFish = Instantiate(fishPrefabs[0], spawnPosition, Quaternion.identity, fishParent);
+            newFish.GetComponent<FishMovement>().setSpeed(fishSpeeds[0]);
         }
         gm.fishCount = objectCount;
 
