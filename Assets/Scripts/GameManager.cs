@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //spawn more fish if there are less than 5 fish
-        if ((activeScene == 1) && (fishCount <= 0))
+        if ((activeScene == 1) && (fishCount <= 5))
         {
             spawnFish.SpawnObjects();
         }
