@@ -10,6 +10,21 @@ public class FishMovement : MonoBehaviour
 
     private bool movingRight = true; // Direction of movement
 
+    private void Start()
+    {
+        
+        // random transform direction
+        float randomFlip = Random.Range(0, 2);
+
+        if ((randomFlip == 1) && (movingRight))
+        {
+            Debug.Log("flip");
+            movingRight = false;
+            FlipSprite();
+        }
+        
+    }
+
     void Update()
     {
         // Move the fish
