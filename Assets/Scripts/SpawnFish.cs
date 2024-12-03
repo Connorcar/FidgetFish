@@ -6,7 +6,7 @@ public class SpawnFish : MonoBehaviour
 {
     public GameObject[] fishPrefabs; // List of fish prefabs to spawn
     public int[] fishDepths; // List of fish depths
-    public int[] fishSpeeds;
+    public int[] fishSpeeds; // List of fish speeds
     public float minX;       // Minimum X-axis range
     public float maxX;        // Maximum X-axis range        
     public float minY;       // Minimum X-axis range
@@ -36,7 +36,7 @@ public class SpawnFish : MonoBehaviour
             GameObject newFish = Instantiate(fishPrefabs[0], spawnPosition, Quaternion.identity, fishParent);
             newFish.GetComponent<FishMovement>().setSpeed(fishSpeeds[0]);
         }
-        gm.fishCount = objectCount;
+        gm.fishCount += objectCount;
 
         //for testing lowest spawn position
         // spawnPosition.y = 200;
