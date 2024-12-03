@@ -298,4 +298,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size_multiplier: 1.5
-  fish_tier: 1
+  fish_tier: 3
