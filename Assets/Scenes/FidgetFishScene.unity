@@ -1609,7 +1609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9012887463689777860, guid: 24875bd8d8849c84f8c7031b07d75ba4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -36.411255
+      value: 27.97
       objectReference: {fileID: 0}
     - target: {fileID: 9012887463689777860, guid: 24875bd8d8849c84f8c7031b07d75ba4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1786,12 +1786,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishPrefabs:
   - {fileID: 1266275654545789623, guid: 24875bd8d8849c84f8c7031b07d75ba4, type: 3}
-  fishDepths: c800000016030000
-  fishSpeeds: 7d000000
+  - {fileID: 1266275654545789623, guid: 8384ea6a4ac6a334897c667917af5b56, type: 3}
+  - {fileID: 1266275654545789623, guid: 42fab105f65bb9848af86aaafc4ec0d3, type: 3}
+  - {fileID: 1266275654545789623, guid: c0e4008acfbf8bb4fb66912638811d84, type: 3}
+  - {fileID: 1266275654545789623, guid: 6786b51441a57a9479a57efb8756850d, type: 3}
+  - {fileID: 1266275654545789623, guid: 096b0a38014c08145b81551711a7b6cf, type: 3}
+  - {fileID: 1266275654545789623, guid: 97bfa62ec8e866642ab060c9efb5c774, type: 3}
+  - {fileID: 1266275654545789623, guid: 3149c3226068eef4aa5873738d64d0d8, type: 3}
+  - {fileID: 1266275654545789623, guid: d62e40dc9f3563449a2e4ce1fc4bb983, type: 3}
+  - {fileID: 1266275654545789623, guid: 4f9f73f9718f37643a7a7b82ae14d1ac, type: 3}
+  fishDepths: c8000000030100003e01000079010000b4010000ef0100002a02000065020000a0020000db02000016030000
+  fishSpeeds: 7d00000091000000a5000000b9000000cd000000e1000000f5000000090100001d01000031010000
   minX: 100
   maxX: 1820
-  minY: 200
-  maxY: 790
+  minY: 0
+  maxY: 0
   objectCount: 10
   fishParent: {fileID: 692289115}
   gm: {fileID: 1834708402}
