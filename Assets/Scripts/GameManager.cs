@@ -14,7 +14,13 @@ public class GameManager : MonoBehaviour
     public int fishCaught = 0;
     public int[] caughtFishTiers;
     public int maxFish = 10;
+
     public TextMeshProUGUI fishCaughtText;
+    public TextMeshProUGUI totalFishCaughtText;
+    public TextMeshProUGUI scoreText;
+
+    public int totalFishCaught = 0;
+    public int score = 0;
 
     public int activeScene = 1; 
 
@@ -22,6 +28,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SwitchToFishing();
+
+        totalFishCaught = 0;
+        score = 0;
     }
 
     // Update is called once per frame
@@ -33,6 +42,8 @@ public class GameManager : MonoBehaviour
             spawnFish.SpawnObjects();
         }
         fishCaughtText.text = "Fish Caught: " + fishCaught + "/" + maxFish;
+        totalFishCaughtText.text = "Total Fish Caught: " + totalFishCaught;
+        scoreText.text = "Score: " + score;
     }
 
     public void SwitchToAquarium()

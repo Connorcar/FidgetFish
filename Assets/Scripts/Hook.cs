@@ -52,8 +52,12 @@ public class Hook : MonoBehaviour
         }
         if (other.CompareTag("Boat") && isFishing == false)
         {
-            gm.fishCaught++;            
+            gm.fishCaught++;
+            gm.totalFishCaught++;
             gm.caughtFishTiers[gm.fishCaught - 1] = currFish.GetComponent<MergeFish>().GetFishTier();
+
+            gm.score += currFish.GetComponent<MergeFish>().fish_tier;
+
             Destroy(currFish);
 
             // Set the fishing flag to false
