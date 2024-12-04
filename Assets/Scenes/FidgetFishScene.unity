@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 1834708402}
-  isFishing: 1
+  isFishing: 0
 --- !u!50 &11810405
 Rigidbody2D:
   serializedVersion: 4
@@ -1906,15 +1906,27 @@ MonoBehaviour:
   - {fileID: 1266275654545789623, guid: 3149c3226068eef4aa5873738d64d0d8, type: 3}
   - {fileID: 1266275654545789623, guid: d62e40dc9f3563449a2e4ce1fc4bb983, type: 3}
   - {fileID: 1266275654545789623, guid: 4f9f73f9718f37643a7a7b82ae14d1ac, type: 3}
-  fishDepths: c8000000030100003e01000079010000b4010000ef0100002a02000065020000a0020000db02000016030000
+  fishDepths:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   fishSpeeds: 7d00000091000000a5000000b9000000cd000000e1000000f5000000090100001d01000031010000
-  minX: 100
-  maxX: 1820
+  minX: 0
+  maxX: 0
   minY: 0
   maxY: 0
   objectCount: 10
   fishParent: {fileID: 692289115}
   gm: {fileID: 1834708402}
+  fishingCanvasRectTransform: {fileID: 1819227092}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

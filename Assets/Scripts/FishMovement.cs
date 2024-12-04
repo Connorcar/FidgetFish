@@ -5,14 +5,15 @@ using UnityEngine;
 public class FishMovement : MonoBehaviour
 {
     public float speed;       // Speed of movement
-    public float minX;        // Left boundary for movement
-    public float maxX;        // Right boundary for movement
+    private float minX = 100;        // Left boundary for movement
+    private float maxX = 1080;        // Right boundary for movement
 
     private bool movingRight = true; // Direction of movement
 
     private void Start()
     {
-        
+        // maxX = 960;
+        // minX = -960;
         // random transform direction
         float randomFlip = Random.Range(0, 2);
 
@@ -59,5 +60,11 @@ public class FishMovement : MonoBehaviour
     public void setSpeed(int newSpeed)
     {
         speed = newSpeed;
+    }
+
+    public void setx(float newMinX, float newMaxX)
+    {
+        minX = newMinX;
+        maxX = newMaxX;
     }
 }

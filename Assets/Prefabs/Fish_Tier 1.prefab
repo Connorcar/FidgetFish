@@ -25,6 +25,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2836287391219788402, guid: 16d265da79f1d944eadfa549a4dbd687, type: 3}
+      propertyPath: maxX
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836287391219788402, guid: 16d265da79f1d944eadfa549a4dbd687, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -174,7 +178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1290084d9beeb70418524bc152a87987, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90fbab4c23eb14b4fb213fc9e7c1a60c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -299,3 +303,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size_multiplier: 1.5
   fish_tier: 1
+  maxFishTier: 10

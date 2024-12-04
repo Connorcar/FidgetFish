@@ -24,7 +24,7 @@ public class Hook : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Collision detected!");
+        //Debug.Log("Collision detected!");
         //print(other.tag + isFishing + gm.fishCaught + gm.maxFish);
         
 
@@ -46,7 +46,7 @@ public class Hook : MonoBehaviour
             gm.fishCount--;
             
 
-            Debug.Log("Fish caught!");
+            //Debug.Log("Fish caught!");
 
             isFishing = false;
         }
@@ -63,7 +63,7 @@ public class Hook : MonoBehaviour
             // Set the fishing flag to false
             isFishing = true;
 
-            Debug.Log("Fish released!");
+            //Debug.Log("Fish released!");
             
         }
     }
