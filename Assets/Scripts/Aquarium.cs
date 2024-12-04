@@ -33,5 +33,6 @@ public class Aquarium : MonoBehaviour
             }
         }
         Array.Clear(gm.caughtFishTiers, 0, gm.caughtFishTiers.Length);
+        gm.fishCaught = 0;
     }
 }

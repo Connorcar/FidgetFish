@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject FishingCanvas;
     public GameObject AquariumCanvas;
+    public Hook hook;
     public int fishCount = 0;
     public SpawnFish spawnFish;
     public int fishCaught = 0;
@@ -48,5 +49,6 @@ public class GameManager : MonoBehaviour
         AquariumCanvas.SetActive(false);
 
         activeScene = 1;
+        hook.isFishing = true;
     }
 }
