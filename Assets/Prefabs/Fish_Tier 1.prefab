@@ -38,19 +38,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835239465943504961, guid: 16d265da79f1d944eadfa549a4dbd687, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3835239465943504961, guid: 16d265da79f1d944eadfa549a4dbd687, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3835239465943504961, guid: 16d265da79f1d944eadfa549a4dbd687, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835239465943504961, guid: 16d265da79f1d944eadfa549a4dbd687, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835239465943504961, guid: 16d265da79f1d944eadfa549a4dbd687, type: 3}
       propertyPath: m_SizeDelta.x
@@ -299,3 +299,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size_multiplier: 1.5
   fish_tier: 1
+  maxFishTier: 10

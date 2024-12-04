@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnFish : MonoBehaviour
 {
     public GameObject[] fishPrefabs; // List of fish prefabs to spawn
-    public int[] fishDepths; // List of fish depths
+    public float[] fishDepths; // List of fish depths
     public int[] fishSpeeds; // List of fish speeds
     public float minX;       // Minimum X-axis range
     public float maxX;        // Maximum X-axis range        
@@ -14,10 +14,23 @@ public class SpawnFish : MonoBehaviour
     public int objectCount;    // Number of objects to spawn
     public Transform fishParent;  // Parent object for the spawned objects
     public GameManager gm;
+    public RectTransform fishingCanvasRectTransform;
 
     void Start()
     {
         SpawnObjects();
+        minX = fishingCanvasRectTransform.rect.width / 2;
+        maxX = fishingCanvasRectTransform.rect.width;
+        minY = fishingCanvasRectTransform.rect.height / 2;
+        maxY = fishingCanvasRectTransform.rect.height;
+
+        fishDepths = new float[11];
+        fishDepths[0] = maxY;
+        fishDepths[10] = minY;
+        for (int i = 1; i < 10; i++)
+        {
+            fishDepths[i] = maxY - (((maxY - minY) / 10)*i) ;
+        }
     }
 
     public void SpawnObjects()

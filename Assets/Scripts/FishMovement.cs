@@ -12,7 +12,8 @@ public class FishMovement : MonoBehaviour
 
     private void Start()
     {
-        
+        maxX = 960;
+        minX = -960;
         // random transform direction
         float randomFlip = Random.Range(0, 2);
 
