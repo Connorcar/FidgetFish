@@ -1211,6 +1211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish_Tier 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6210676811552863301, guid: c0e4008acfbf8bb4fb66912638811d84, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9012887463689777860, guid: c0e4008acfbf8bb4fb66912638811d84, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1862,6 +1866,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishPrefabs:
   - {fileID: 1266275654545789623, guid: 24875bd8d8849c84f8c7031b07d75ba4, type: 3}
+  - {fileID: 1266275654545789623, guid: 8384ea6a4ac6a334897c667917af5b56, type: 3}
+  - {fileID: 1266275654545789623, guid: 42fab105f65bb9848af86aaafc4ec0d3, type: 3}
+  - {fileID: 1266275654545789623, guid: c0e4008acfbf8bb4fb66912638811d84, type: 3}
+  - {fileID: 1266275654545789623, guid: 6786b51441a57a9479a57efb8756850d, type: 3}
+  - {fileID: 1266275654545789623, guid: 096b0a38014c08145b81551711a7b6cf, type: 3}
+  - {fileID: 1266275654545789623, guid: 97bfa62ec8e866642ab060c9efb5c774, type: 3}
+  - {fileID: 1266275654545789623, guid: 3149c3226068eef4aa5873738d64d0d8, type: 3}
+  - {fileID: 1266275654545789623, guid: d62e40dc9f3563449a2e4ce1fc4bb983, type: 3}
+  - {fileID: 1266275654545789623, guid: 4f9f73f9718f37643a7a7b82ae14d1ac, type: 3}
   fishDepths: c800000016030000
   fishSpeeds: 7d000000
   minX: 100
@@ -3463,6 +3476,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishPrefabs:
   - {fileID: 1266275654545789623, guid: 24875bd8d8849c84f8c7031b07d75ba4, type: 3}
+  - {fileID: 1266275654545789623, guid: 8384ea6a4ac6a334897c667917af5b56, type: 3}
+  - {fileID: 1266275654545789623, guid: 42fab105f65bb9848af86aaafc4ec0d3, type: 3}
+  - {fileID: 1266275654545789623, guid: c0e4008acfbf8bb4fb66912638811d84, type: 3}
+  - {fileID: 1266275654545789623, guid: 6786b51441a57a9479a57efb8756850d, type: 3}
+  - {fileID: 1266275654545789623, guid: 096b0a38014c08145b81551711a7b6cf, type: 3}
+  - {fileID: 1266275654545789623, guid: 97bfa62ec8e866642ab060c9efb5c774, type: 3}
+  - {fileID: 1266275654545789623, guid: 3149c3226068eef4aa5873738d64d0d8, type: 3}
+  - {fileID: 1266275654545789623, guid: d62e40dc9f3563449a2e4ce1fc4bb983, type: 3}
+  - {fileID: 1266275654545789623, guid: 4f9f73f9718f37643a7a7b82ae14d1ac, type: 3}
   gm: {fileID: 1834708402}
   minX: 100
   maxX: 1820
