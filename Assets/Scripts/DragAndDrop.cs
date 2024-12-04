@@ -12,7 +12,7 @@ public class DragAndDrop : MonoBehaviour
     private void Start()
     {
         canvas = GetComponentInParent<Canvas>();
-        Debug.Log(SceneManager.GetActiveScene().name);
+        //Debug.Log(SceneManager.GetActiveScene().name);
     }
 
     public void DragHandler(BaseEventData data)

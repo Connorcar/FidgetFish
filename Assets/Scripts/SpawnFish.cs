@@ -16,13 +16,17 @@ public class SpawnFish : MonoBehaviour
     public GameManager gm;
     public RectTransform fishingCanvasRectTransform;
 
-    void Start()
+    void Awake()
     {
-        SpawnObjects();
-        minX = fishingCanvasRectTransform.rect.width / 2;
+        minX = 0;
         maxX = fishingCanvasRectTransform.rect.width;
-        minY = fishingCanvasRectTransform.rect.height / 2;
-        maxY = fishingCanvasRectTransform.rect.height;
+        minY = 0;
+        maxY = fishingCanvasRectTransform.rect.height - (fishingCanvasRectTransform.rect.height / 5);
+        // minX = 100;
+        // maxX = 1080;
+        // minY = 200;
+        // maxY = 800;
+        print("minX: " + minX + " maxX: " + maxX + " minY: " + minY + " maxY: " + maxY);
 
         fishDepths = new float[11];
         fishDepths[0] = maxY;
@@ -31,6 +35,7 @@ public class SpawnFish : MonoBehaviour
         {
             fishDepths[i] = maxY - (((maxY - minY) / 10)*i) ;
         }
+        SpawnObjects();
     }
 
     public void SpawnObjects()
@@ -84,22 +89,24 @@ public class SpawnFish : MonoBehaviour
             }
             
             // Generate a random position
-            minY = fishDepths[randomFish];
-            maxY = fishDepths[randomFish+1];
-            float randomY = Random.Range(minY, maxY);
+            float tempMinY = fishDepths[randomFish];
+            float tempMaxY = fishDepths[randomFish+1];
+            float randomY = Random.Range(tempMinY, tempMaxY);
             float randomX = Random.Range(minX, maxX);
 
             // Create the spawn position with the fixed Y-axis
             spawnPosition = new Vector3(randomX, randomY, 0f);
+            print("x: " + randomX + " y: " + randomY);
 
             // Instantiate the objectPrefab at the spawn position
             GameObject newFish = Instantiate(fishPrefabs[randomFish], spawnPosition, Quaternion.identity, fishParent);
             newFish.GetComponent<FishMovement>().setSpeed(fishSpeeds[randomFish]);
+            newFish.GetComponent<FishMovement>().setx(minX, maxX);
         }
         gm.fishCount += objectCount;
 
-        //for testing lowest spawn position
-        // spawnPosition.y = 200;
-        // Instantiate(fishPrefab, spawnPosition, Quaternion.identity, fishParent);
+        // for testing spawn position
+        // spawnPosition = new Vector3(fishingCanvasRectTransform.rect.width/2, maxY, 0f);
+        // Instantiate(fishPrefabs[0], spawnPosition, Quaternion.identity, fishParent);
     }
 }

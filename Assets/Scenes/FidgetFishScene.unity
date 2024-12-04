@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 1834708402}
-  isFishing: 1
+  isFishing: 0
 --- !u!50 &11810405
 Rigidbody2D:
   serializedVersion: 4
@@ -1919,6 +1919,10 @@ MonoBehaviour:
   - 0
   - 0
   fishSpeeds: 7d00000091000000a5000000b9000000cd000000e1000000f5000000090100001d01000031010000
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
   objectCount: 10
   fishParent: {fileID: 692289115}
   gm: {fileID: 1834708402}
