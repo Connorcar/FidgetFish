@@ -25,7 +25,54 @@ public class SpawnFish : MonoBehaviour
         Vector3 spawnPosition = Vector3.zero;
         for (int i = 0; i < objectCount; i++)
         {
+            //odds for generating fish
+            float randomValue = Random.Range(0f, 1f); 
+            int randomFish = 0;
+            // Determine which condition is met based on the cumulative probabilities
+            if (randomValue < 0.50f) // 50% chance
+            {
+                randomFish = 0;
+            }
+            else if (randomValue < 0.50f + 0.45f) // 45% chance
+            {
+                randomFish = 1;
+            }
+            else if (randomValue < 0.50f + 0.45f + 0.40f) // 40% chance
+            {
+                randomFish = 2;
+            }
+            else if (randomValue < 0.50f + 0.45f + 0.40f + 0.35f) // 35% chance
+            {
+                randomFish = 3;
+            }
+            else if (randomValue < 0.50f + 0.45f + 0.40f + 0.35f + 0.30f) // 30% chance
+            {
+                randomFish = 4;
+            }
+            else if (randomValue < 0.50f + 0.45f + 0.40f + 0.35f + 0.30f + 0.25f) // 25% chance
+            {
+                randomFish = 5;
+            }
+            else if (randomValue < 0.50f + 0.45f + 0.40f + 0.35f + 0.30f + 0.25f + 0.20f) // 20% chance
+            {
+                randomFish = 6;
+            }
+            else if (randomValue < 0.50f + 0.45f + 0.40f + 0.35f + 0.30f + 0.25f + 0.20f + 0.15f) // 15% chance
+            {
+                randomFish = 7;
+            }
+            else if (randomValue < 0.50f + 0.45f + 0.40f + 0.35f + 0.30f + 0.25f + 0.20f + 0.15f + 0.10f) // 10% chance
+            {
+                randomFish = 8;
+            }
+            else // Remaining 5% chance
+            {
+                randomFish = 9;
+            }
+            
             // Generate a random position
+            minY = fishDepths[randomFish];
+            maxY = fishDepths[randomFish+1];
             float randomY = Random.Range(minY, maxY);
             float randomX = Random.Range(minX, maxX);
 
@@ -33,8 +80,8 @@ public class SpawnFish : MonoBehaviour
             spawnPosition = new Vector3(randomX, randomY, 0f);
 
             // Instantiate the objectPrefab at the spawn position
-            GameObject newFish = Instantiate(fishPrefabs[0], spawnPosition, Quaternion.identity, fishParent);
-            newFish.GetComponent<FishMovement>().setSpeed(fishSpeeds[0]);
+            GameObject newFish = Instantiate(fishPrefabs[randomFish], spawnPosition, Quaternion.identity, fishParent);
+            newFish.GetComponent<FishMovement>().setSpeed(fishSpeeds[randomFish]);
         }
         gm.fishCount += objectCount;
 

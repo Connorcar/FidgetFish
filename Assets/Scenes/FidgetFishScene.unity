@@ -1906,12 +1906,12 @@ MonoBehaviour:
   - {fileID: 1266275654545789623, guid: 3149c3226068eef4aa5873738d64d0d8, type: 3}
   - {fileID: 1266275654545789623, guid: d62e40dc9f3563449a2e4ce1fc4bb983, type: 3}
   - {fileID: 1266275654545789623, guid: 4f9f73f9718f37643a7a7b82ae14d1ac, type: 3}
-  fishDepths: c800000016030000
-  fishSpeeds: 7d000000
+  fishDepths: c8000000030100003e01000079010000b4010000ef0100002a02000065020000a0020000db02000016030000
+  fishSpeeds: 7d00000091000000a5000000b9000000cd000000e1000000f5000000090100001d01000031010000
   minX: 100
   maxX: 1820
-  minY: 200
-  maxY: 790
+  minY: 0
+  maxY: 0
   objectCount: 10
   fishParent: {fileID: 692289115}
   gm: {fileID: 1834708402}
@@ -3807,6 +3807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   hook: {fileID: 11810400}
+  canvasRect: {fileID: 1819227092}
   boat: {fileID: 327569486}
   line: {fileID: 1251166194}
   minY: -480
