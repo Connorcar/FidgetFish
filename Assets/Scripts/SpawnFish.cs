@@ -29,39 +29,39 @@ public class SpawnFish : MonoBehaviour
             float randomValue = Random.Range(0f, 1f); 
             int randomFish = 0;
             // Determine which condition is met based on the cumulative probabilities
-            if (randomValue < 0.50f) // 50% chance
+            if (randomValue < 0.15f) // 15% chance
             {
                 randomFish = 0;
             }
-            else if (randomValue < 0.50f + 0.45f) // 45% chance
+            else if (randomValue < 0.30f) // 15% chance
             {
                 randomFish = 1;
             }
-            else if (randomValue < 0.50f + 0.45f + 0.40f) // 40% chance
+            else if (randomValue < 0.45f) // 15% chance
             {
                 randomFish = 2;
             }
-            else if (randomValue < 0.50f + 0.45f + 0.40f + 0.35f) // 35% chance
+            else if (randomValue < 0.55f) // 10% chance
             {
                 randomFish = 3;
             }
-            else if (randomValue < 0.50f + 0.45f + 0.40f + 0.35f + 0.30f) // 30% chance
+            else if (randomValue < 0.65f) // 10% chance
             {
                 randomFish = 4;
             }
-            else if (randomValue < 0.50f + 0.45f + 0.40f + 0.35f + 0.30f + 0.25f) // 25% chance
+            else if (randomValue < 0.75f) // 10% chance
             {
                 randomFish = 5;
             }
-            else if (randomValue < 0.50f + 0.45f + 0.40f + 0.35f + 0.30f + 0.25f + 0.20f) // 20% chance
+            else if (randomValue < 0.85f) // 10% chance
             {
                 randomFish = 6;
             }
-            else if (randomValue < 0.50f + 0.45f + 0.40f + 0.35f + 0.30f + 0.25f + 0.20f + 0.15f) // 15% chance
+            else if (randomValue < 0.90f) // 5% chance
             {
                 randomFish = 7;
             }
-            else if (randomValue < 0.50f + 0.45f + 0.40f + 0.35f + 0.30f + 0.25f + 0.20f + 0.15f + 0.10f) // 10% chance
+            else if (randomValue < 0.95f) // 5% chance
             {
                 randomFish = 8;
             }
