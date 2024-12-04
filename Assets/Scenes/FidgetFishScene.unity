@@ -3551,6 +3551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   hook: {fileID: 11810400}
+  canvasRect: {fileID: 1819227092}
   boat: {fileID: 327569486}
   line: {fileID: 1251166194}
   minY: -480

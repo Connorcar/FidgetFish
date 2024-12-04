@@ -25,7 +25,7 @@ public class SpawnFish : MonoBehaviour
         Vector3 spawnPosition = Vector3.zero;
         for (int i = 0; i < objectCount; i++)
         {
-            //weighted odds for generating fish
+            //odds for generating fish
             float randomValue = Random.Range(0f, 1f); 
             int randomFish = 0;
             // Determine which condition is met based on the cumulative probabilities

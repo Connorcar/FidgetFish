@@ -7,6 +7,7 @@ public class FollowMouse : MonoBehaviour
     Vector3 pos;
     public float speed = 1f;
     public RectTransform hook;
+    public RectTransform canvasRect; 
     public RectTransform boat;
     public RectTransform line;
     public float minY = -480f; 
@@ -21,13 +22,14 @@ public class FollowMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {        
-        // Get the mouse position in screen coordinates
-        Vector3 mousePosition = Input.mousePosition;
+        // Convert mouse position from screen to local UI coordinates
+        Vector2 localPoint;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, Input.mousePosition, null, out localPoint);
 
-        // Clamp the Y position to stay within the specified range
-        float clampedY = Mathf.Clamp(mousePosition.y, minY, maxY);
+        // Clamp the Y position to the specified range
+        float clampedY = Mathf.Clamp(localPoint.y, minY, maxY);
 
-        // Set the hook's position, maintaining its current X position
+        // Update the hook's position, keeping X unchanged
         hook.anchoredPosition = new Vector2(hook.anchoredPosition.x, clampedY);
 
         // Calculate the position of the front of the boat
