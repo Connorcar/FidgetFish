@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject FishingCanvas;
     public GameObject AquariumCanvas;
+    public GameObject MainMenuCanvas;
     public Hook hook;
     public int fishCount = 0;
     public SpawnFish spawnFish;
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SwitchToFishing();
+        switchToMainMenu();
 
         totalFishCaught = 0;
         score = 0;
@@ -58,8 +59,18 @@ public class GameManager : MonoBehaviour
     {
         FishingCanvas.SetActive(true);
         AquariumCanvas.SetActive(false);
+        MainMenuCanvas.SetActive(false);
 
         activeScene = 1;
         hook.isFishing = true;
+    }
+
+    public void switchToMainMenu()
+    {
+        MainMenuCanvas.SetActive(true);
+        AquariumCanvas.SetActive(false);
+        FishingCanvas.SetActive(false);
+
+        activeScene = 0;
     }
 }
