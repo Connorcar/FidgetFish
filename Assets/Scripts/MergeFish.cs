@@ -12,6 +12,8 @@ public class MergeFish : MonoBehaviour
     private DragAndDrop dragAndDrop;
     private Aquarium aquarium;
 
+    public AudioSource audioSource;
+
     private void Start()
     {
         // transform.localScale = new Vector3(-1f, 1f, 1f);
@@ -31,6 +33,7 @@ public class MergeFish : MonoBehaviour
                 {
                     if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
                     {
+                        audioSource.Play();
                         StartCoroutine(SpawnNewFish());
                     }
                     else
