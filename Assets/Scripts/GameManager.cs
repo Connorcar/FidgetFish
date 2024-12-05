@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     {
         switchToMainMenu();
 
+        caughtFishTiers = new int[maxFish];
+
         totalFishCaught = 0;
         score = 0;
     }
@@ -69,7 +71,7 @@ public class GameManager : MonoBehaviour
         activeScene = 1;
         hook.isFishing = true;
 
-        backgroundAudio.PlayOcean();
+        backgroundAudio.PlayOcean();    
     }
 
     public void switchToMainMenu()
