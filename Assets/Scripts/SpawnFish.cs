@@ -21,7 +21,7 @@ public class SpawnFish : MonoBehaviour
         minX = 0;
         maxX = fishingCanvasRectTransform.rect.width;
         minY = 0;
-        maxY = fishingCanvasRectTransform.rect.height - (fishingCanvasRectTransform.rect.height / 5);
+        maxY = fishingCanvasRectTransform.rect.height - (fishingCanvasRectTransform.rect.height / 4);
         // minX = 100;
         // maxX = 1080;
         // minY = 200;
