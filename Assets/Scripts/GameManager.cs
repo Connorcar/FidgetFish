@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject FishingCanvas;
     public GameObject AquariumCanvas;
     public GameObject MainMenuCanvas;
+    public GameObject TutorialPanel;
     public Hook hook;
     public int fishCount = 0;
     public SpawnFish spawnFish;
@@ -78,5 +79,15 @@ public class GameManager : MonoBehaviour
         FishingCanvas.SetActive(false);
 
         activeScene = 0;
+    }
+
+    public void switchToTutorial()
+    {
+        TutorialPanel.SetActive(true);
+    }
+
+    public void closeTutorial()
+    {
+        TutorialPanel.SetActive(false);
     }
 }
