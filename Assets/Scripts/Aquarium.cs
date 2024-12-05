@@ -12,9 +12,14 @@ public class Aquarium : MonoBehaviour
     public float minY;                // Minimum Y-axis range
     public float maxY;                // Maximum Y-axis range
     public Transform fishParent;    // Parent object for the spawned objects
+    public RectTransform aquariumCanvasRectTransform;
 
     public void onAddFishClick()
     {
+        minX = 0;
+        maxX = aquariumCanvasRectTransform.rect.width;
+        minY = 0;
+        maxY = (aquariumCanvasRectTransform.rect.height ) - (aquariumCanvasRectTransform.rect.height / 4);
         Debug.Log("Add Fish Button Clicked");
         for (int i = 0; i < gm.maxFish; i++)
         {
