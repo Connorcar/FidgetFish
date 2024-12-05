@@ -4321,7 +4321,7 @@ MonoBehaviour:
   spawnFish: {fileID: 692289116}
   fishCaught: 0
   caughtFishTiers: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  maxFish: 10
+  maxFish: 20
   backgroundAudio: {fileID: 1358154463}
   fishCaughtText: {fileID: 1422651704}
   totalFishCaughtText: {fileID: 1065671009}
