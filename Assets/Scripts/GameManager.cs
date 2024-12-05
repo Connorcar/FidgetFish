@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public int[] caughtFishTiers;
     public int maxFish = 10;
 
+    public BackgroundAudio backgroundAudio;
+
     public TextMeshProUGUI fishCaughtText;
     public TextMeshProUGUI totalFishCaughtText;
     public TextMeshProUGUI scoreText;
@@ -53,6 +55,8 @@ public class GameManager : MonoBehaviour
         AquariumCanvas.SetActive(true);
 
         activeScene = 2;
+
+        backgroundAudio.PlayAquarium();
     }
 
     public void SwitchToFishing()
@@ -63,6 +67,8 @@ public class GameManager : MonoBehaviour
 
         activeScene = 1;
         hook.isFishing = true;
+
+        backgroundAudio.PlayOcean();
     }
 
     public void switchToMainMenu()

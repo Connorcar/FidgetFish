@@ -8,9 +8,15 @@ public class Hook : MonoBehaviour
     private GameObject currFish;    // Reference to the current fish caught by the hook
     public bool isFishing = false;  // Flag to check if the hook is fishing
 
+    private AudioSource audioSource;
+    public AudioClip hook_sound;
+    public AudioClip catch_sound;
+
     void Start()
     {
         isFishing = true;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -44,7 +50,9 @@ public class Hook : MonoBehaviour
 
             // Decrement the fish count in the GameManager
             gm.fishCount--;
-            
+
+            audioSource.clip = hook_sound;
+            audioSource.Play();
 
             //Debug.Log("Fish caught!");
 
@@ -57,6 +65,9 @@ public class Hook : MonoBehaviour
             gm.caughtFishTiers[gm.fishCaught - 1] = currFish.GetComponent<MergeFish>().GetFishTier();
 
             gm.score += currFish.GetComponent<MergeFish>().fish_tier;
+
+            audioSource.clip = catch_sound;
+            audioSource.Play();
 
             Destroy(currFish);
 
