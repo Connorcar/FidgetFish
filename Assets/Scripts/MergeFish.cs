@@ -14,12 +14,15 @@ public class MergeFish : MonoBehaviour
 
     public AudioSource audioSource;
 
+    public GameManager gm;
+
     private void Start()
     {
         // transform.localScale = new Vector3(-1f, 1f, 1f);
 
         dragAndDrop = GetComponent<DragAndDrop>();
         aquarium = FindObjectOfType<Aquarium>();
+        gm = FindObjectOfType<GameManager>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -34,6 +37,8 @@ public class MergeFish : MonoBehaviour
                     if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
                     {
                         audioSource.Play();
+                        gm.score += (fish_tier + 1);
+
                         StartCoroutine(SpawnNewFish());
                     }
                     else
