@@ -16,10 +16,14 @@ public class Aquarium : MonoBehaviour
 
     public void onAddFishClick()
     {
-        minX = 0;
-        maxX = aquariumCanvasRectTransform.rect.width;
-        minY = aquariumCanvasRectTransform.rect.height;
-        maxY = (aquariumCanvasRectTransform.rect.height*2 ) - (aquariumCanvasRectTransform.rect.height / 4);
+        // minX = 0;
+        // maxX = aquariumCanvasRectTransform.rect.width;
+        // minY = aquariumCanvasRectTransform.rect.height;
+        // maxY = (aquariumCanvasRectTransform.rect.height*2 ) - (aquariumCanvasRectTransform.rect.height / 4);
+        minX = 100;
+        maxX = 1950;
+        minY = 200;
+        maxY = 800;
         Debug.Log("Add Fish Button Clicked");
         for (int i = 0; i < gm.maxFish; i++)
         {

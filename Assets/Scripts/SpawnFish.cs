@@ -18,14 +18,14 @@ public class SpawnFish : MonoBehaviour
 
     void Awake()
     {
-        minX = 0;
-        maxX = fishingCanvasRectTransform.rect.width/2 ;
-        minY = 0;
-        maxY = (fishingCanvasRectTransform.rect.height/2 ) - (fishingCanvasRectTransform.rect.height / 4);
-        // minX = 100;
-        // maxX = 1080;
-        // minY = 200;
-        // maxY = 800;
+        // minX = 0;
+        // maxX = fishingCanvasRectTransform.rect.width/2 ;
+        // minY = 0;
+        // maxY = (fishingCanvasRectTransform.rect.height/2 ) - (fishingCanvasRectTransform.rect.height / 4);
+        minX = 100;
+        maxX = 1950;
+        minY = 200;
+        maxY = 800;
         print("minX: " + minX + " maxX: " + maxX + " minY: " + minY + " maxY: " + maxY);
 
         fishDepths = new float[11];
